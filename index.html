@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Photo Upload</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="../ext-4.1.1/resources/css/ext-all-scoped.css" />
+        <script type="text/javascript" src="../ext-4.1.1/ext-all-dev.js"></script>
+
+        <style type="text/css">
+            .upload {
+                background-image:url(images/upload.png) !important;
+            }
+        </style>
+        
+        <script type="text/javascript" src="js/jsonDataStore.js"></script>
+        <script type="text/javascript" src="js/photoUpload.js"></script>
+
+        <script type="text/javascript">
+            Ext.scopeResetCSS = true;
+
+            Ext.onReady(function() {
+                Ext.QuickTips.init();
+
+                Ext.Loader.setConfig({enabled: true});
+                Ext.Loader.setPath('Ext.ux', '../../ext-4.1.1/examples/ux');
+                
+                Ext.create('photoUpload', {
+                    title: 'Upload Photo',
+                    height: 360,
+                    width: 497,
+                    renderTo: document.body
+                });
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
